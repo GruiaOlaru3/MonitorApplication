@@ -1,0 +1,7 @@
+# This is a Linux project: keep LF endings in the repo so it builds on Linux
+# regardless of the contributor's OS / git autocrlf setting.
+* text=auto eol=lf
+
+# Treat the report and any future binaries as binary
+*.pdf binary
+*.csv text eol=lf

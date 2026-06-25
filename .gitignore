@@ -1,0 +1,15 @@
+# Build output
+bin/
+build/
+*.o
+*.out
+
+# Runtime-generated files
+raport_monitorizare.txt
+
+# Editor / IDE (machine-specific paths)
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
