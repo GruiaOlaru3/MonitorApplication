@@ -25,7 +25,7 @@ void print_help()
   printf("    get_services       - porturi in LISTEN\n");
   printf("    get_connections    - conexiuni active\n");
   printf("\n  Statistici (<count> nr. inreg, default 10, <data> filtru dupa ziua sau intervalul orar):\n");
-  printf("    get_memory_hist <count>/<data>        - istoric utilizare memorie\n");
+  printf("    get_sys_hist <count>/<data>           - istoric utilizare memorie si CPU\n");
   printf("    get_users_hist <count>/<data>         - statistici conectari per user\n");
   printf("    get_serv_hist <count/port>/<data> cnt/port - conexiuni per port/serviciu\n");
   printf("    get_list_hist <count>/<data>          - istoric porturi deschise (LISTEN)\n");
@@ -131,7 +131,7 @@ int main(int argc, char *argv[])
       printf("\n=== STATISTICI ===\n");
       
       printf("\n[Memorie]\n");
-      if (tr_cmd(sd, "get_memory_hist 5", rasp) == 0) 
+      if (tr_cmd(sd, "get_sys_hist 5", rasp) == 0)
         printf("%s", rasp);
       
       printf("\n[Utilizatori]\n");
